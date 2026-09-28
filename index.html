@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechMart - Smart Price Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TechMart</h1>
+        <p>Smart Price Finder</p>
+    </header>
+
+
+    <main>
+
+        <!-- PRICE FINDER -->
+
+        <section class="finder-section">
+
+            <h2>Find Products Around Your Price</h2>
+
+            <p class="description">
+                Enter a target price to find the closest products.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="number"
+                    id="target-price"
+                    placeholder="Enter target price"
+                    min="0"
+                >
+
+                <button id="search-btn">
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRICE RANGE -->
+
+        <section class="range-section">
+
+            <h2>Find Products in a Price Range</h2>
+
+            <p class="description">
+                Enter minimum and maximum prices.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="number"
+                    id="min-price"
+                    placeholder="Minimum price"
+                    min="0"
+                >
+
+                <input
+                    type="number"
+                    id="max-price"
+                    placeholder="Maximum price"
+                    min="0"
+                >
+
+                <button id="range-btn">
+                    Find Products in This Range
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section>
+
+            <h2 id="results-title">
+                Closest Products
+            </h2>
+
+            <div
+                id="results-container"
+                class="product-grid">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PROVIDED DATA -->
+    <script src="data.js"></script>
+
+    <!-- OUR CODE -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
