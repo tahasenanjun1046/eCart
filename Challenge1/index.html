@@ -2,33 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TechMart - Smart Price Finder</title>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>eCart - Smart Price Finder</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <header>
-        <h1>TechMart</h1>
+
+        <h1>eCart</h1>
+
         <p>Smart Price Finder</p>
+
     </header>
 
 
     <main>
 
-        <!-- PRICE FINDER -->
+        <!-- TARGET PRICE -->
 
-        <section class="finder-section">
+        <section class="search-section">
 
             <h2>Find Products Around Your Price</h2>
 
-            <p class="description">
+            <p>
                 Enter a target price to find the closest products.
             </p>
+
 
             <div class="search-box">
 
@@ -36,7 +45,6 @@
                     type="number"
                     id="target-price"
                     placeholder="Enter target price"
-                    min="0"
                 >
 
                 <button id="search-btn">
@@ -50,32 +58,31 @@
 
         <!-- PRICE RANGE -->
 
-        <section class="range-section">
+        <section class="search-section">
 
             <h2>Find Products in a Price Range</h2>
 
-            <p class="description">
+            <p>
                 Enter minimum and maximum prices.
             </p>
+
 
             <div class="search-box">
 
                 <input
                     type="number"
                     id="min-price"
-                    placeholder="Minimum price"
-                    min="0"
+                    placeholder="Minimum Price"
                 >
 
                 <input
                     type="number"
                     id="max-price"
-                    placeholder="Maximum price"
-                    min="0"
+                    placeholder="Maximum Price"
                 >
 
                 <button id="range-btn">
-                    Find Products in This Range
+                    Find Products
                 </button>
 
             </div>
@@ -87,12 +94,13 @@
 
         <section>
 
-            <h2 id="results-title">
+            <h2 id="result-title">
                 Closest Products
             </h2>
 
+
             <div
-                id="results-container"
+                id="products-container"
                 class="product-grid">
             </div>
 
@@ -102,9 +110,11 @@
 
 
     <!-- PROVIDED DATA -->
+
     <script src="data.js"></script>
 
-    <!-- OUR CODE -->
+    <!-- OUR JAVASCRIPT -->
+
     <script src="app.js"></script>
 
 </body>
