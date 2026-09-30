@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Range Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Inventory Dashboard</h1>
+    <p>Find inventory by price range</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Inventory Range</h2>
+
+        <input type="number" id="min" placeholder="Minimum Price">
+        <input type="number" id="max" placeholder="Maximum Price">
+
+        <button onclick="search()">Search</button>
+    </section>
+
+
+    <section>
+        <h2>Price Slider</h2>
+
+        <input
+            type="range"
+            id="minSlider"
+            min="0"
+            max="150000"
+            value="0"
+            step="1000"
+            oninput="sliderSearch()"
+        >
+
+        <input
+            type="range"
+            id="maxSlider"
+            min="0"
+            max="150000"
+            value="150000"
+            step="1000"
+            oninput="sliderSearch()"
+        >
+
+        <p>
+            ₹<span id="minValue">0</span>
+            -
+            ₹<span id="maxValue">150000</span>
+        </p>
+    </section>
+
+
+    <section class="summary">
+
+        <div>
+            <h3>Products</h3>
+            <p id="count">0</p>
+        </div>
+
+        <div>
+            <h3>Inventory Value</h3>
+            <p id="value">₹0</p>
+        </div>
+
+    </section>
+
+
+    <h2>Matching Products</h2>
+
+    <div id="products"></div>
+
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
