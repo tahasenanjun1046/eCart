@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Popular Products</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>eCart</h1>
+    <p>Discover Our Most Popular Products</p>
+</header>
+
+
+<main>
+
+    <section class="top-section">
+
+        <div>
+            <h2>Popular Products</h2>
+            <p>Products loved by our customers</p>
+        </div>
+
+        <select id="top-k">
+            <option value="3">Top 3</option>
+            <option value="5">Top 5</option>
+            <option value="10">Top 10</option>
+        </select>
+
+    </section>
+
+
+    <section
+        id="products"
+        class="product-grid">
+    </section>
+
+</main>
+
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
