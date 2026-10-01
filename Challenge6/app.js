@@ -16,7 +16,6 @@ function search() {
         alert("Minimum price cannot be greater than maximum price");
         return;
     }
-
     showProducts(min, max);
 }
 

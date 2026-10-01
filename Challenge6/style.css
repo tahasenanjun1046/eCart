@@ -1,90 +1,227 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial;
-    margin: 0;
-    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background: #f3f8f7;
+    color: #17201e;
 }
 
+/* HEADER */
+
 header {
-    background: #222;
+    background: linear-gradient(135deg, #064e3b, #059669, #0891b2);
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 55px 20px;
+    position: relative;
+    overflow: hidden;
 }
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    left: -100px;
+    top: -120px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    right: -120px;
+    bottom: -170px;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 42px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #d1fae5;
+}
+
+/* MAIN */
 
 main {
     width: 90%;
-    max-width: 1100px;
-    margin: 30px auto;
+    max-width: 1150px;
+    margin: 35px auto;
 }
 
-section {
+/* SECTIONS */
+
+section:not(.summary) {
     background: white;
-    padding: 20px;
+    padding: 28px;
     margin-bottom: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border: 1px solid #e3eeee;
 }
 
-input {
-    padding: 10px;
-    margin: 5px;
+section h2 {
+    margin-bottom: 15px;
 }
+
+/* INPUT */
+
+input[type="number"] {
+    padding: 14px;
+    margin: 5px;
+    border: 2px solid #dce9e6;
+    border-radius: 11px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #059669;
+    box-shadow: 0 0 0 4px #d1fae5;
+}
+
+/* BUTTON */
 
 button {
-    padding: 10px 18px;
-    background: #2563eb;
+    padding: 14px 23px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #059669, #0891b2);
     color: white;
-    border: 0;
-    border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.25s;
 }
 
 button:hover {
-    background: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(5,150,105,0.25);
 }
 
+/* SLIDERS */
+
+input[type="range"] {
+    width: 100%;
+    margin: 15px 0;
+    accent-color: #059669;
+    cursor: pointer;
+}
+
+/* SUMMARY */
+
 .summary {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 30px;
 }
 
 .summary div {
     background: white;
-    padding: 20px;
-    flex: 1;
+    padding: 28px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border: 1px solid #e3eeee;
+    transition: 0.3s;
 }
+
+.summary div:hover {
+    transform: translateY(-7px);
+}
+
+.summary div:first-child {
+    border-top: 5px solid #059669;
+}
+
+.summary div:last-child {
+    border-top: 5px solid #0891b2;
+}
+
+.summary h3 {
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.summary p {
+    color: #059669;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* PRODUCTS */
 
 #products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 23px;
+    border-radius: 20px;
+    border: 1px solid #e3eeee;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(5,150,105,0.13);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
 }
 
 .price {
-    color: #2563eb;
-    font-size: 20px;
+    color: #059669 !important;
+    font-size: 22px;
     font-weight: bold;
 }
 
+/* MOBILE */
+
 @media (max-width: 600px) {
-    input,
+
+    main {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    input[type="number"],
     button {
         width: 100%;
         margin: 5px 0;
     }
 
     .summary {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
