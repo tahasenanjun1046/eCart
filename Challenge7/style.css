@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+    background: #f5f3ff;
+}
+
+header {
+    background: linear-gradient(135deg, #28b0d9, #48ec61);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.search-box {
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #ddd;
+}
+
+.search-box span {
+    font-size: 22px;
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 17px;
+}
+
+#suggestions {
+    background: white;
+    margin-top: 8px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px #ddd;
+}
+
+.suggestion {
+    padding: 16px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion:hover,
+.active {
+    background: #f3e8ff;
+}
+
+.suggestion strong {
+    color: #6d28d9;
+}
+
+.empty {
+    padding: 20px;
+    text-align: center;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
+#selected-product {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+#selected-product h2 {
+    color: #6d28d9;
+    margin-bottom: 15px;
+}
+
+#selected-product p {
+    margin: 10px 0;
+}
+
+#selected-product .price {
+    color: #7c3aed;
+    font-size: 24px;
+    font-weight: bold;
+}

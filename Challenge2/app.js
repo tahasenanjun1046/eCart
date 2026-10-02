@@ -10,36 +10,25 @@ storeData.categories.forEach(category => {
 
 // Calculate popularity and sort products
 function getPopularProducts(number) {
-
     let result = [...products];
-
     result.sort((a, b) => {
         return (b.rating * b.reviews) -
                (a.rating * a.reviews);
     });
-
     return result.slice(0, number);
 }
 
 
 // Display products
 function showProducts(number) {
-
     let result = getPopularProducts(number);
-
     let container = document.getElementById("products");
-
     container.innerHTML = "";
-
     result.forEach((product, index) => {
-
         let popularity =
             product.rating * product.reviews;
-
         container.innerHTML += `
-
             <div class="card">
-
                 <span class="rank">
                     #${index + 1}
                 </span>
